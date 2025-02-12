@@ -17,7 +17,6 @@ func! ProgrammingSettings() abort
 	set updatetime=1000
 	match BadWhitespace /\s\+$/
     "let g:coq_settings = { 'keymap.pre_select': v:true }
-    inoremap <C-Y> <C-N><C-Y>
     syntax enable
 endfunc
 
@@ -174,6 +173,8 @@ set cursorline
 
 set background=dark
 set termguicolors
+
+ino <silent><expr> <C-Y> pumvisible() ? (complete_info().selected == -1 ? "\<C-N><C-Y>" : "\<C-Y>") : "\<C-Y>"
 
 "let g:gruvbox_material_background = 'hard'
 "let g:gruvbox_material_better_performance = 1
