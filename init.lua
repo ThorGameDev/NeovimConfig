@@ -52,6 +52,11 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- Quail has fairly different syntax from Ruby, however, given that no Quail treesitter grammar exists,
+-- Ruby seems to be the best option. "def" is highlighted, and # comments are left uncolored.
+-- Of course, it would be nice to have C style folds. Quail is unique with it's unix comments and C fold mix.
+vim.treesitter.language.register('ruby', { 'quail' })
+
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldtext = ""

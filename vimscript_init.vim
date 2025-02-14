@@ -156,6 +156,13 @@ func! JavaSettings() abort
 endfunc
 au FileType java call JavaSettings()
 
+" Quail
+func! QuailSettings() abort
+	call C_Folds()
+    abbr int i32
+endfunc
+au BufNewFile,BufRead *.qui set filetype=quail
+au FileType quail call QuailSettings()
 
 " All **************************************************
 set spelllang=en_us
