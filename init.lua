@@ -17,7 +17,7 @@ colorscheme gruvbox-material
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed={"cpp", "python", "vim", "c_sharp", "bash", "css", "gdscript", "html", "javascript", "lua", "c", "wgsl", "vimdoc", "java", "markdown", "markdown_inline", "query", "json", "rust", "hyprlang"},
+  ensure_installed={"cpp", "python", "vim", "c_sharp", "bash", "css", "gdscript", "html", "javascript", "lua", "c", "wgsl", "vimdoc", "java", "markdown", "markdown_inline", "query", "json", "rust", "hyprlang", "ruby"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
