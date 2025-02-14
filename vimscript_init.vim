@@ -192,15 +192,15 @@ ino <silent><expr> <C-Y> pumvisible() ? (complete_info().selected == -1 ? "\<C-N
 " Bar Bar Keys
 
 " Move to previous/next
-nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
-nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
+nnoremap <silent>    <A-h> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <A-l> <Cmd>BufferNext<CR>
 
 " Re-order to previous/next
-nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
-nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+nnoremap <silent>    <A-H> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <A-L> <Cmd>BufferMoveNext<CR>
 
 " Close buffer
 nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
 " Restore buffer
-nnoremap <silent>    <A-s-c> <Cmd>BufferRestore<CR>
+nnoremap <silent>    <A-C> <Cmd>BufferRestore<CR>
 
