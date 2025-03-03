@@ -68,5 +68,11 @@ require("mason-lspconfig").setup_handlers {
 		require("lspconfig")[server_name].setup {}
 	end,
 }
+require('lspconfig').clangd.setup({
+  cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+  init_options = {
+    fallbackFlags = {'-std=c++17'},
+  },
+})
 
 vim.cmd('COQnow -s')
